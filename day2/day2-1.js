@@ -1,9 +1,9 @@
-const fs = require("fs");
+const fs = require('fs');
 
 const Intcode = function() {
   const values = fs
-    .readFileSync("day2-input.txt", { encoding: "utf8" })
-    .split(",")
+    .readFileSync('day2-input.txt', { encoding: 'utf8' })
+    .split(',')
     .map(n => Number(n));
   let isHalted = false;
   let position = 0;
