@@ -1,5 +1,3 @@
-const fs = require('fs');
-
 const calculateFuelRequirements = function(mass) {
   const fuelMass = Math.floor(mass / 3) - 2;
   let sum = 0;
@@ -11,12 +9,6 @@ const calculateFuelRequirements = function(mass) {
   return sum;
 };
 
-const fuelRequirements = function() {
-  const values = fs
-    .readFileSync('day1-input.txt', { encoding: 'utf8' })
-    .split('\n');
-
+exports.fuelRequirements = function(values) {
   return values.reduce((acc, cur) => acc + calculateFuelRequirements(cur), 0);
 };
-
-console.log(fuelRequirements());

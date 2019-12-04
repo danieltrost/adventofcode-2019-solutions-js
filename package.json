@@ -1,0 +1,13 @@
+{
+  "name": "adventofcode-2019-solutions-js",
+  "version": "0.0.1",
+  "author": "Daniel Trost",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}
