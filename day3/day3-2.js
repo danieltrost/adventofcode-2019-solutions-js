@@ -1,5 +1,3 @@
-const fs = require('fs');
-
 const generateSet = function(lines, c, lowest) {
   const set = new Set();
   let currentX = 0;
@@ -11,8 +9,8 @@ const generateSet = function(lines, c, lowest) {
     const distance = Number(lines[i].substring(1, lines[i].length));
 
     for (var j = 0; j < distance; j++) {
-      if (travelDistance > lowest) {
-        return;
+      if (lowest !== null && travelDistance > lowest) {
+        return travelDistance;
       }
 
       travelDistance++;
@@ -45,11 +43,7 @@ const generateSet = function(lines, c, lowest) {
   return set;
 };
 
-const compute = function() {
-  const values = fs
-    .readFileSync('day3-input.txt', { encoding: 'utf8' })
-    .split('\n');
-
+exports.compute = function(values) {
   const line1 = values[0].split(',');
   const line2 = values[1].split(',');
 
@@ -72,5 +66,3 @@ const compute = function() {
 
   return lowestNumber;
 };
-
-console.log(compute());

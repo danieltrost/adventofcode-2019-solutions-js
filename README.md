@@ -10,6 +10,6 @@
 This will run tests with all provided examples. Additionally, this will run on CI for every commit.
 
 ```
-yarn
-yarn test
+npm i
+npm test
 ```

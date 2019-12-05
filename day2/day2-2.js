@@ -1,20 +1,14 @@
-const fs = require('fs');
-
-const determineNounAndVerb = function() {
+exports.determineNounAndVerb = function(values) {
   for (let noun = 0; noun < 100; noun++) {
     for (let verb = 0; verb < 100; verb++) {
-      if (Intcode(noun, verb) === 19690720) {
+      if (Intcode([...values], noun, verb) === 19690720) {
         return 100 * noun + verb;
       }
     }
   }
 };
 
-const Intcode = function(noun, verb) {
-  const values = fs
-    .readFileSync('day2-input.txt', { encoding: 'utf8' })
-    .split(',')
-    .map(n => Number(n));
+const Intcode = function(values, noun, verb) {
   let isHalted = false;
   let position = 0;
 
@@ -42,5 +36,3 @@ const Intcode = function(noun, verb) {
 
   return values[0];
 };
-
-console.log(determineNounAndVerb());

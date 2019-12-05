@@ -1,8 +1,4 @@
-const fs = require('fs');
-
-const compute = function() {
-  const start = 402328;
-  const end = 864247;
+exports.compute = function(start, end) {
   let count = 0;
 
   for (var i = start; i <= end; i++) {
@@ -24,5 +20,3 @@ const compute = function() {
 
   return count;
 };
-
-console.log(compute());

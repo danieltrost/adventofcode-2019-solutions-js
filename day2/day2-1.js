@@ -1,10 +1,4 @@
-const fs = require('fs');
-
-const Intcode = function() {
-  const values = fs
-    .readFileSync('day2-input.txt', { encoding: 'utf8' })
-    .split(',')
-    .map(n => Number(n));
+exports.Intcode = function(values) {
   let isHalted = false;
   let position = 0;
 
@@ -32,5 +26,3 @@ const Intcode = function() {
 
   return values[0];
 };
-
-console.log(Intcode());

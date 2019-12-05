@@ -1,5 +1,3 @@
-const fs = require('fs');
-
 const generateSet = function(lines) {
   const set = new Set();
   let currentX = 0;
@@ -34,11 +32,7 @@ const generateSet = function(lines) {
   return set;
 };
 
-const compute = function() {
-  const values = fs
-    .readFileSync('day3-input.txt', { encoding: 'utf8' })
-    .split('\n');
-
+exports.compute = function(values) {
   const line1 = values[0].split(',');
   const line2 = values[1].split(',');
 
@@ -60,5 +54,3 @@ const compute = function() {
 
   return lowestNumber;
 };
-
-console.log(compute());
