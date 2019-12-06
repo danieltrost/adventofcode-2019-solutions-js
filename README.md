@@ -3,7 +3,7 @@
 🎄JavaScript Solutions for Advent of Code 2019
 
 [![CI Status](https://github.com/danieltrost/adventofcode-2019-solutions-js/workflows/Node%20CI/badge.svg)](https://github.com/danieltrost/adventofcode-2019-solutions-js/actions)
-![Completion Progress](https://img.shields.io/static/v1?label=progress&message=4/25&color=yellow)
+![Completion Progress](https://img.shields.io/static/v1?label=progress&message=5/25&color=yellow)
 
 ## How to run tests
 
